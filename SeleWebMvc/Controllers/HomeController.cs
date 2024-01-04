@@ -15,6 +15,7 @@ namespace SeleWebMvc.Controllers
 
         public IActionResult Index()
         {
+            ViewData["email"] = "ola alo loa";
             return View();
         }
 
