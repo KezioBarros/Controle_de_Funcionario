@@ -1,4 +1,4 @@
-namespace SeleWebMvc.Models
+namespace SeleWebMvc.Models.ViewModels
 {
     public class ErrorViewModel
     {
