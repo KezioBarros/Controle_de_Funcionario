@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SeleWebMvc.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<SeleWebMvcContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SeleWebMvcContext") ?? throw new InvalidOperationException("Connection string 'SeleWebMvcContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
