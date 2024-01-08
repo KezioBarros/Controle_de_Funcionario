@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SeleWebMvc.Models;
+using SeleWebMvc.Models.ViewModels;
 using System.Diagnostics;
 
 namespace SeleWebMvc.Controllers
@@ -15,6 +15,7 @@ namespace SeleWebMvc.Controllers
 
         public IActionResult Index()
         {
+            ViewData["email"] = "ola alo loa";
             return View();
         }
 
