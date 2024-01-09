@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SeleWebMvc.Data;
 
@@ -11,9 +12,11 @@ using SeleWebMvc.Data;
 namespace SeleWebMvc.Migrations
 {
     [DbContext(typeof(SeleWebMvcContext))]
-    partial class SeleWebMvcContextModelSnapshot : ModelSnapshot
+    [Migration("20240109170448_OtherEntitis")]
+    partial class OtherEntitis
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
