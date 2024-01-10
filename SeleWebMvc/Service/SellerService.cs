@@ -16,5 +16,11 @@ namespace SeleWebMvc.Service
         {
             return _context.Seller.ToList();
         }
+
+        public void Inset(Seller obj)
+        {
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
     }
 }
