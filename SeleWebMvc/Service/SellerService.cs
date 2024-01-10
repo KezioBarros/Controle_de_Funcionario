@@ -18,7 +18,7 @@ namespace SeleWebMvc.Service
         }
 
         public void Inset(Seller obj)
-        {
+        {          
             _context.Add(obj);
             _context.SaveChanges();
         }
