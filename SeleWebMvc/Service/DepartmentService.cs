@@ -1,6 +1,8 @@
 ﻿using SeleWebMvc.Data;
 using SeleWebMvc.Models;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace SeleWebMvc.Service
 {
@@ -13,9 +15,9 @@ namespace SeleWebMvc.Service
             _context = context;
         }
 
-        public List<Department> FindAll()
+        public async Task<List<Department>> FindAllAsync()
         {
-            return _context.Department.OrderBy(x => x.Name).ToList();
+            return await _context.Department.OrderBy(x => x.Name).ToListAsync();
         }
     }
 }
